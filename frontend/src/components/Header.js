@@ -1,9 +1,15 @@
-import React from 'react'
-import {Link} from "react-router-dom"
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const auth = localStorage.getItem("user");
+  const navigate = useNavigate();
+  const logout = () => {
+    localStorage.clear();
+    navigate("/signup");
+  };
   return (
-        <div className="sticky-navbar">
+    <div className="sticky-navbar">
       <ul className="nav-ul">
         <li>
           <Link to="/">Products</Link>
@@ -15,15 +21,20 @@ const Header = () => {
           <Link to="/update">Update Product</Link>
         </li>
         <li>
-          <Link to="/logout">Logout</Link>
+          <Link to="/profile">Profile</Link>
         </li>
         <li>
-          <Link to="/profile">Profile</Link>
-
+          {auth ? (
+            <Link onClick={logout} to="/signup">
+              Logout
+            </Link>
+          ) : (
+            <Link to="/signup">Sign Up</Link>
+          )}
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

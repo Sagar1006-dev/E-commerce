@@ -127,37 +127,27 @@
   margin-top: 0;
 }
 
-/* App.css */
 
-/* App.css */
 
-/* App.css */
-
-h1 {
+ h1 {
   font-size: 50px;
   color: black;
   margin-top: 100px;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-  /* Additional Styles */
-  font-family: 'Your Font Here', sans-serif; /* Replace with your preferred font */
-  font-weight: bold; /* Adjust the font weight as needed */
-  letter-spacing: 1px; /* Adjust letter spacing */
-  line-height: 1.2; /* Adjust line height */
-  padding: 20px; /* Add padding around the text */
-  background-color: #fff; /* Set a background color if needed */
-  border-radius: 8px; /* Add border-radius for rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow */
-
-  /* Text Animation */
+  font-family: 'Your Font Here', sans-serif;
+  font-weight: bold; 
+  letter-spacing: 1px; 
+  line-height: 1.2; 
+  padding: 20px; 
+  background-color: #fff;
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-in-out;
-
-  /* Hover Effect */
   transition: transform 0.3s ease-in-out;
 }
 
-/* Keyframe Animation */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -167,10 +157,9 @@ h1 {
   }
 }
 
-/* Hover Effect */
 h1:hover {
-  transform: scale(1.1); /* Adjust the scale factor for the hover effect */
-  color: #ff5733; /* Change color on hover */
-  text-decoration: underline; /* Add underline on hover */
+  transform: scale(1.1); 
+  color: #ff5733;
+  text-decoration: underline;
   cursor: pointer;
-}
+}  

@@ -3,40 +3,74 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #f8f8f8; /* Set your desired background color */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+  background-color: #f8f8f8;  
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
 }
 .nav-ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
-  padding-left: 20px; /* Add space on the left side */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding-left: 20px; 
 }
 
 .nav-ul li {
   float: left;
-  margin-right: 20px; /* Adjust the spacing between list items */
+  margin-right: 20px;
 }
 
 .nav-ul li:last-child {
-  margin-right: 0; /* Remove margin from the last list item */
+  margin-right: 0; 
 }
 
 .nav-ul li a {
   display: block;
-  color: #333; /* Text color */
+  color: #333; 
   text-align: center;
   padding: 15px 20px;
   text-decoration: none;
-  transition: color 0.3s; /* Smooth transition on hover for text color */
+  transition: color 0.3s; 
 }
-
 .nav-ul li a:hover {
-  color: #e21313; /* Hover text color */
+  color: #e21313; 
+}
+/* .nav-logo{
+  width: 60px;
+  float: left;
+  margin-top: 4px;
+  margin-left: 20px;
+
+} */
+.nav-logo {
+  width: 60px;
+  float: left;
+  margin-top: 4px;
+  margin-left: 20px;
+  transition: opacity 0.3s; /* Added opacity transition */
 }
 
+.nav-logo:hover {
+  /* Add transparency to the logo */
+  opacity: 0.8;
+}
+/* Add this to your CSS or styling solution */
+.nav-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-ul.nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-ul li {
+  margin-left: 10px;
+}
+
+/* footer */
 .footer {
   background-color: white; /* Set the background color */
   color: black; /* Set the text color */
@@ -127,39 +161,218 @@
   margin-top: 0;
 }
 
+/* login */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, #4caf50, #007bff);
+}
 
+.login {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
- h1 {
-  font-size: 50px;
-  color: black;
-  margin-top: 100px;
+.login h2 {
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: 'Your Font Here', sans-serif;
-  font-weight: bold; 
-  letter-spacing: 1px; 
-  line-height: 1.2; 
-  padding: 20px; 
-  background-color: #fff;
-  border-radius: 8px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
-  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+  color: #007bff; /* Changed font color to a shade of blue */
+  font-family: 'Arial', sans-serif; /* Changed font family */
 }
 
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-h1:hover {
-  transform: scale(1.1); 
-  color: #ff5733;
-  text-decoration: underline;
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
   cursor: pointer;
-}  
+}
+
+button:hover {
+  background: linear-gradient(to right, #0056b3, #003366);
+}
+ 
+
+/* AddProduct */
+
+.p-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.9); /* Adjust the alpha value for transparency */
+}
+
+.add-product {
+  max-width: 440px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Background color for the .add-product component */
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 4px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  color: #555;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #3498db;
+}
+.invalid-input {
+  color: red;
+  margin-top: -18px;
+  display: block;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+
+/* product-list */
+ .product-list {
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+.product-list h2 {
+  color:black; 
+  margin-top: 100px;
+  
+}
+
+.product-list table {
+  width: 70%; 
+  margin: auto;
+  border-collapse: collapse;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.product-list th, .product-list td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.product-list th {
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+}
+
+.product-list td {
+  background-color: #fff;
+}
+
+.product-list tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.product-list tr:hover {
+  background-color: #e6e6e6;
+} 
+/* .search-product{
+  width: 600px;
+  margin: 20px;
+  height: 40px;
+  border: 2px solid skyblue;
+} */
+.search-product {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  height: 40px;
+  border: 2px solid skyblue;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none; 
+}
+
+/* Hover effect */
+.search-product:hover {
+  border-color: deepskyblue;
+}
+
+/* Focus effect */
+.search-product:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+

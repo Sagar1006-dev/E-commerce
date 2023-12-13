@@ -4,6 +4,10 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
 import PriviteComponent from "./components/PrivateComponent";
+import Login from "./components/Login";
+import AddProduct from "./components/AddProduct";
+import ProductList from "./components/ProductList";
+import UpdateProduct from "./components/UpdateProduct";
 
 function App() {
   return (
@@ -11,16 +15,16 @@ function App() {
       <Router>
         <Header />
         <Routes>
-
-          <Route element={<PriviteComponent/>}>
-          <Route path="/" element={<h1>Product Listing Components</h1>} />
-          <Route path="/add" element={<h1>Add Product Components</h1>} />
-          <Route path="/update" element={<h1>Update Product Components</h1>} />
-          <Route path="/logout" element={<h1>Logout Components</h1>} />
-          <Route path="/profile" element={<h1>Profile Components</h1>} />
+          <Route element={<PriviteComponent />}>
+            <Route path="/" element={<ProductList />} />
+            <Route path="/add" element={<AddProduct />} />
+            <Route path="/update/:id" element={<UpdateProduct />} />
+            <Route path="/logout" element={<h1>Logout Components</h1>} />
+            <Route path="/profile" element={<h1>Profile Components</h1>} />
           </Route>
-          
-          <Route path="/signup" element={<SignUp/>} />
+
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
       <Footer />
